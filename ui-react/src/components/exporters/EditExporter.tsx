@@ -13,6 +13,7 @@ export default function EditExporter({
   exporter
 }: EditExporterProps) {
   const exporterTypeToEditComponent = new Map<string, JSX.Element>();
+  exporterTypeToEditComponent.set(OutputVendorName.OFX, <EditFileExporter exporter={exporter} handleSave={handleSave}/>);
   exporterTypeToEditComponent.set(OutputVendorName.CSV, <EditFileExporter exporter={exporter} handleSave={handleSave}/>);
   exporterTypeToEditComponent.set(OutputVendorName.JSON, <EditFileExporter exporter={exporter} handleSave={handleSave}/>);
   exporterTypeToEditComponent.set(OutputVendorName.YNAB, <EditYnabExporter exporterConfig={exporter} handleSave={handleSave} />);

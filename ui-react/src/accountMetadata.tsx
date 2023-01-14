@@ -28,6 +28,7 @@ const accountIdToDisplayName: Record<CompanyTypes | OutputVendorName, string> = 
   [OutputVendorName.GOOGLE_SHEETS]: 'Google Sheets',
   [OutputVendorName.YNAB]: 'Ynab',
   [OutputVendorName.JSON]: 'Json',
+  [OutputVendorName.OFX]: 'Ofx',
 };
 
 const accountMetadata: Record<CompanyTypes | OutputVendorName, AccountMetadata> = mapValues(accountIdToDisplayName, (displayName, accountId) => {

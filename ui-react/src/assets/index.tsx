@@ -1,10 +1,6 @@
 import { OutputVendorName } from '../types';
 import discount from './importers/discount.jpeg';
 import visaCal from './importers/visa-cal.jpeg';
-import csv from './exporters/excel.png';
-import ynab from './exporters/ynab.jpeg';
-import googleSheets from './exporters/sheets.png';
-import json from './exporters/json.jpeg';
 import hapoalim from './importers/poalim.jpeg';
 import hapoalimBeOnline from './importers/hapoalimBeOnline.jpeg';
 import beinleumi from './importers/beinleumi.jpeg';
@@ -17,6 +13,12 @@ import otsarHahayal from './importers/otsarHahayal.jpeg';
 import mizrahi from './importers/mizrahi.png';
 import leumi from './importers/leumi.png';
 import massad from './importers/massad.png';
+
+import csv from './exporters/excel.png';
+import ynab from './exporters/ynab.jpeg';
+import googleSheets from './exporters/sheets.png';
+import json from './exporters/json.jpeg';
+import ofx from './exporters/ofx.png';
 
 export const importerIcons = {
   discount,
@@ -39,5 +41,6 @@ export const exporterIcons = {
   [OutputVendorName.CSV]: csv,
   [OutputVendorName.YNAB]: ynab,
   [OutputVendorName.JSON]: json,
-  [OutputVendorName.GOOGLE_SHEETS]: googleSheets
+  [OutputVendorName.GOOGLE_SHEETS]: googleSheets,
+  [OutputVendorName.OFX]: ofx
 };

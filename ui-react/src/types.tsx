@@ -5,7 +5,8 @@ export enum OutputVendorName {
   YNAB = 'ynab',
   GOOGLE_SHEETS = 'googleSheets',
   JSON = 'json',
-  CSV = 'csv'
+  CSV = 'csv',
+  OFX = 'ofx'
 }
 
 export interface Config {
@@ -14,6 +15,7 @@ export interface Config {
     [OutputVendorName.YNAB]?: YnabConfig;
     [OutputVendorName.JSON]?: JsonConfig;
     [OutputVendorName.CSV]?: CsvConfig;
+    [OutputVendorName.OFX]?: OfxConfig;
   };
   scraping: {
     timeout: number;
@@ -46,6 +48,12 @@ export interface CsvConfig extends OutputVendorConfigBase {
 }
 
 export interface JsonConfig extends OutputVendorConfigBase {
+  options: {
+    filePath: string;
+  }
+}
+
+export interface OfxConfig extends OutputVendorConfigBase {
   options: {
     filePath: string;
   }
